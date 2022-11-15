@@ -15,7 +15,8 @@ import 'amfe-flexible'
 // 注册使用 Vant组件库
 Vue.use(Vant)
 Vue.config.productionTip = false
-
+// 导入过滤时间
+import './utils/dayjs'
 new Vue({
   router,
   store,

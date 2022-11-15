@@ -33,9 +33,10 @@
         <template #button>
           <van-count-down
             millisecond
-            time="60000"
+            time="9000"
             format="ss s"
             v-if="isshow"
+            @finish="daojishijieshu"
           />
           <!-- 这里的普通按钮也会 触发表单提交 -->
           <van-button
@@ -46,6 +47,7 @@
             type="default"
             round
             @click="sendyanzhengma"
+            ref="yanzhengma"
             >发送验证码</van-button
           >
         </template>
@@ -163,6 +165,13 @@ export default {
           this.$toast("发送失败了!请稍后再试。😥");
         }
       }
+    },
+    // 倒计时结束
+    daojishijieshu() {
+      this.isshow = false;
+      this.$nextTick(() => {
+        this.$refs.yanzhengma.innerHTML = "重新获取";
+      });
     },
   },
 };

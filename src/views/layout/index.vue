@@ -1,7 +1,7 @@
 <template>
   <div class="layout_containet">
     <!-- 二级路由显示点 -->
-    <router-view />
+    <router-view class="adx" />
 
     <!-- 底部标签导航栏 -->
     <van-tabbar route>

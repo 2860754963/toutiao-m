@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 import { setitem, getitem } from "@/utils/storage";
 Vue.use(Vuex)
 //  d定义一个变量  写错了会提示
-const user_token = 'user_token'
+const user_token = 'yuxi_user_token'
 export default new Vuex.Store({
   state: {
     user: getitem(user_token)

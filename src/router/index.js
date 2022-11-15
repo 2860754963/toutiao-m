@@ -31,11 +31,25 @@ const routes = [
         component: () => import('@/views/my')
       }, {
         path: '/video',
-        name: 'my',
+        name: 'video',
         component: () => import('@/views/video')
       },
     ]
 
+  }, {
+    path: '/search',
+    name: 'search',
+    component: () => import('@/views/search')
+  }, {
+    path: '/article/:articleid',
+    name: 'article',
+    component: () => import('@/views/article'),
+    props: true ////这里就是开启 组件传参， 把路由参数 映射到组件当中去，当然组件中需要props接收
+  },
+  {
+    path: '/user/profile',
+    name: 'user-profile',
+    component: () => import('@/views/user-profile')
   }
 ]
 

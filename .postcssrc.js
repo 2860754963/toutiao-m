@@ -37,7 +37,9 @@ module.exports = {
                 return obj.file.indexOf('vant') !== -1 ? 37.5 : 75
             },
             // 配置要转换的css属性
-            propList: ['*']
+            propList: ['*'],
+            // 配置不做单位转换的资源文件名
+            exclude: 'github-markdown'
         }
     }
 }

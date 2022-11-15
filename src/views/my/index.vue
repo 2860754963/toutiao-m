@@ -10,7 +10,9 @@
           }}</span>
         </div>
         <div class="right">
-          <van-button size="mini" round class="butn">编辑资料</van-button>
+          <van-button size="mini" round class="butn" to="/user/profile"
+            >编辑资料</van-button
+          >
         </div>
       </div>
       <div class="message">
